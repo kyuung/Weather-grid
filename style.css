@@ -1,0 +1,62 @@
+.weather-container {
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-rows: 1fr 1.5fr;
+	text-align: center;
+	align-items: center;
+
+	width: 400px;
+	height: 100px;
+	border-top: 1px solid #e5e5e5;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.item {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.weather-container img {
+	width: 2em;
+	height: 2em;
+}
+
+.weather-today-info {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.weather-today-info img {
+	margin-right: 0.2em;
+}
+
+.temperature::after {
+	content: '°C';
+	margin-left: 0.2em;
+}
+
+.temperature-night::before {
+	content: '/';
+	margin-right: 0.2em;
+	margin-left: 0.2em;
+}
+
+/* border line */
+.weather-container .item:nth-child(-n + 3) {
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.weather-container .item:nth-child(5) {
+	border-left: 1px solid #e5e5e5;
+	border-right: 1px solid #e5e5e5;
+}
+
+.weather-container .item:nth-child(2) {
+	border-left: 1px solid #e5e5e5;
+	border-right: 1px solid #e5e5e5;
+}
